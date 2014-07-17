@@ -25,22 +25,23 @@ public class JoseMoralesProgram1 {
 			counter += 1;
 			System.out.println("Enter the rainfall for Quarter  " + counter + ", in inches:");
 			
-			switch(counter){
-			case 1: 
-				quarter1 = input.nextDouble();
-				break;
+			switch(counter) {
 				
-			case 2: 
-				quarter2 = input.nextDouble();
-				break;
-				
-			case 3: 
-				quarter3 = input.nextDouble();
-				break;
-				
-			case 4: 
-				quarter4 = input.nextDouble();
-				break;
+				case 1: 
+					quarter1 = input.nextDouble();
+					break;
+					
+				case 2: 
+					quarter2 = input.nextDouble();
+					break;
+					
+				case 3: 
+					quarter3 = input.nextDouble();
+					break;
+					
+				case 4: 
+					quarter4 = input.nextDouble();
+					break;
 			
 			}
 			
@@ -48,13 +49,34 @@ public class JoseMoralesProgram1 {
 		}// end while
 		
 		
-		// Average computation
-		double average = (quarter1 + quarter2 + quarter3 + quarter4) / 4;
-		System.out.println("The average rainfall for the year was " + average + " inches.");
 		
-		// Total Rainfall computation
-		double totalRainfall = quarter1 + quarter2 + quarter3 + quarter4;
-		System.out.println("The total rainfall for the year was " + totalRainfall + " inches.");
+			// use if block to determine which quarter had the most rain
+			if (quarter1 > quarter2 && quarter1 > quarter3 && quarter1 > quarter4){
+				
+				System.out.println("Quarter 1 had the most rainfall this year, with " + quarter1 + " inches of rain");
+				
+			} else if (quarter2 > quarter1 && quarter2 > quarter3 && quarter2 > quarter4) {
+				
+				System.out.println("Quarter 2 had the most rainfall this year, with " + quarter2 + " inches of rain");
+				
+			} else if (quarter3 > quarter1 && quarter3 > quarter2 && quarter3 > quarter4) {
+				
+				System.out.println("Quarter 3 had the most rainfall this year, with " + quarter3 + " inches of rain");
+				
+			} else if (quarter4 > quarter1 && quarter4 > quarter2 && quarter4 > quarter3) {
+				
+				System.out.println("Quarter 4 had the most rainfall this year, with " + quarter4 + " inches of rain");
+				
+			}
+		
+
+			// Average computation
+			double average = (quarter1 + quarter2 + quarter3 + quarter4) / 4;
+			System.out.println("The average rainfall for the year was " + average + " inches.");
+			
+			// Total Rainfall computation
+			double totalRainfall = quarter1 + quarter2 + quarter3 + quarter4;
+			System.out.println("The total rainfall for the year was " + totalRainfall + " inches.");
 	
 	} // end main method
 
