@@ -1,13 +1,15 @@
 /*Program 1 Assignment 10 By Jose Morales Mendizabal
- * */
+ ==================================================== */
+import java.util.Scanner;
+
 public class JoseMoralesProgram1 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		// Instantiate Scanner Object
+		Scanner input = new Scanner(System.in);
 
+		System.out.println(44);
 	}
 
 }
