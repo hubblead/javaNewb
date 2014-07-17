@@ -51,6 +51,10 @@ public class JoseMoralesProgram1 {
 		// Average computation
 		double average = (quarter1 + quarter2 + quarter3 + quarter4) / 4;
 		System.out.println("The average rainfall for the year was " + average + " inches.");
+		
+		// Total Rainfall computation
+		double totalRainfall = quarter1 + quarter2 + quarter3 + quarter4;
+		System.out.println("The total rainfall for the year was " + totalRainfall + " inches.");
 	
 	} // end main method
 
