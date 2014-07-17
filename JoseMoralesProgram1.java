@@ -9,7 +9,7 @@ public class JoseMoralesProgram1 {
 		// Instantiate Scanner Object
 		Scanner input = new Scanner(System.in);
 
-		System.out.println(44);
+		System.out.println(45);
 	}
 
 }
