@@ -1,7 +1,9 @@
 /*Program 1 Assignment 10 By Jose Morales Mendizabal
  ==================================================== */
 
+
 import java.util.Scanner;
+
 
 public class JoseMoralesProgram1 {
 
@@ -9,83 +11,61 @@ public class JoseMoralesProgram1 {
 		
 		// Instantiate Scanner Object
 		Scanner input = new Scanner(System.in);
-
-		// declare and initialize quarter variables
-		double 	quarter1 = 0; 
-		double	quarter2 = 0;
-		double 	quarter3 = 0;
-		double 	quarter4 = 0;
 		
-		// declare and init counter
-		int counter = 0;
+		// Initialize Variables
+		double totalRainfall = 0;
+		double averageRainfall;
+		double maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
+		double minRainfall = Integer.MAX_VALUE; // minimum rainfall possible assigned to highest possible value
+		double quarterRainfall;
 		
-		while (counter < 4) {
+		
+	
+		
+		for(int i = 1; i < 5; i++){
 			
-			// up counter with each iteration
-			counter += 1;
-			System.out.println("Enter the rainfall for Quarter  " + counter + ", in inches:");
+		
+			System.out.println("Enter rainfall for quarterRainFall " + i);
+			quarterRainfall = input.nextDouble();
 			
-			switch(counter) {
+			// add each quarter together with each iteration
+			totalRainfall += quarterRainfall;
+			
+			
+			// check for max and min rain totals
+			if(quarterRainfall > maxRainfall) {
 				
-				case 1: 
-					quarter1 = input.nextDouble();
-					break;
-					
-				case 2: 
-					quarter2 = input.nextDouble();
-					break;
-					
-				case 3: 
-					quarter3 = input.nextDouble();
-					break;
-					
-				case 4: 
-					quarter4 = input.nextDouble();
-					break;
-			
+				maxRainfall = quarterRainfall;
+				
+				//store Quarter's ID number, with Highest Rainfall
+				int maxRainfallQuarter = i;
+				
+				// output wettest quarter
+				System.out.println("The quarter with most rain is Quarter " + maxRainfallQuarter);
+				
+			} else if (quarterRainfall < minRainfall){
+				
+				minRainfall = quarterRainfall;
+				int leastRainfallQuarter = i;
+				
+				// output wettest quarter
+				System.out.println("The quarter with least rain is Quarter " + leastRainfallQuarter);
 			}
 			
 			
-		}// end while
-		
-		
-		
-		// use if block to determine which quarter had the most rain:
-		// Each quarter rainfall value is compared to each of the other quarters. If all tests return to true
-		// that is the quarter with the most rainfall
-		
-		if (quarter1 > quarter2 && quarter1 > quarter3 && quarter1 > quarter4){
 			
-			System.out.println("Quarter 1 had the most rainfall this year, with " + quarter1 + " inches of rain");
-			
-		} else if (quarter2 > quarter1 && quarter2 > quarter3 && quarter2 > quarter4) {
-			
-			System.out.println("Quarter 2 had the most rainfall this year, with " + quarter2 + " inches of rain");
-			
-		} else if (quarter3 > quarter1 && quarter3 > quarter2 && quarter3 > quarter4) {
-			
-			System.out.println("Quarter 3 had the most rainfall this year, with " + quarter3 + " inches of rain");
-			
-		} else if (quarter4 > quarter1 && quarter4 > quarter2 && quarter4 > quarter3) {
-			
-			System.out.println("Quarter 4 had the most rainfall this year, with " + quarter4 + " inches of rain");
-			
-		} else {
-			// if all values are equal default to this message
-			System.out.println("All quarters had the exact same rainfall? You sure?");
-		}
-	
+		} // end for loop
 
-		// TODO: Determine which quarter had the LEAST rainfall. 
 		
-		// Average computation
-		double average = (quarter1 + quarter2 + quarter3 + quarter4) / 4;
-		System.out.println("The average rainfall for the year was " + average + " inches.");
+
+		// Output sum total
+		System.out.println("It rained " + totalRainfall + " inches in total this year");
 		
-		// Total Rainfall computation
-		double totalRainfall = quarter1 + quarter2 + quarter3 + quarter4;
-		System.out.println("The total rainfall for the year was " + totalRainfall + " inches.");
-	
-	} // end main method
+		// Output average
+		averageRainfall = totalRainfall / 4;
+		System.out.println("There was an average annual rainfall of " + averageRainfall + " inches.");
+		
+
+	}
 
 }
