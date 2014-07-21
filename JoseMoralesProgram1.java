@@ -12,44 +12,45 @@ public class JoseMoralesProgram1 {
 		// Instantiate Scanner Object
 		Scanner input = new Scanner(System.in);
 		
-		// Initialize Variables
+		
+		// Declare and initialize Variables
 		double totalRainfall = 0;
 		double averageRainfall;
+		double quarterRainfall;
 		double maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
 		double minRainfall = Integer.MAX_VALUE; // minimum rainfall possible assigned to highest possible value
-		double quarterRainfall;
 		
 		
+		// Variables that store the number of the quarters with most and least rain
+		int maxRainfallQuarter = 0;
+		int leastRainfallQuarter = 0;
 	
 		
 		for(int i = 1; i < 5; i++){
 			
 		
-			System.out.println("Enter rainfall for quarterRainFall " + i);
+			System.out.println("Enter rainfall for quarter number " + i);
 			quarterRainfall = input.nextDouble();
 			
 			// add each quarter together with each iteration
 			totalRainfall += quarterRainfall;
 			
 			
-			// check for max and min rain totals
-			if(quarterRainfall > maxRainfall) {
+			// check for max and min rain fall
+			if (quarterRainfall > maxRainfall) {
 				
 				maxRainfall = quarterRainfall;
 				
 				//store Quarter's ID number, with Highest Rainfall
-				int maxRainfallQuarter = i;
+				maxRainfallQuarter = i;
 				
-				// output wettest quarter
-				System.out.println("The quarter with most rain is Quarter " + maxRainfallQuarter);
 				
-			} else if (quarterRainfall < minRainfall){
+			} else if (quarterRainfall < minRainfall) {
 				
 				minRainfall = quarterRainfall;
-				int leastRainfallQuarter = i;
 				
-				// output wettest quarter
-				System.out.println("The quarter with least rain is Quarter " + leastRainfallQuarter);
+				leastRainfallQuarter = i;
+
 			}
 			
 			
@@ -57,7 +58,14 @@ public class JoseMoralesProgram1 {
 		} // end for loop
 
 		
+		
+		// output driest quarter
+		System.out.println("The quarter with least rain is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
+		
 
+		// output wettest quarter
+		System.out.println("The quarter with most rain is Quarter " + maxRainfallQuarter + " with " + maxRainfall + " inches of rain.");
+		
 		// Output sum total
 		System.out.println("It rained " + totalRainfall + " inches in total this year");
 		
