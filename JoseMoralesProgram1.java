@@ -37,7 +37,8 @@ public class JoseMoralesProgram1 {
 			
 			
 			// check for max and min rain fall
-			if (quarterRainfall > maxRainfall && quarterRainfall != 0) {
+			if (quarterRainfall >= maxRainfall) 
+			{
 				
 				maxRainfall = quarterRainfall;
 				
@@ -46,7 +47,8 @@ public class JoseMoralesProgram1 {
 				
 			} 
 			
-			 if (quarterRainfall < minRainfall) {
+			 if (quarterRainfall <= minRainfall) 
+			 {
 				
 				minRainfall = quarterRainfall;
 				
