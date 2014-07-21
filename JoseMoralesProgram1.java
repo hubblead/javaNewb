@@ -26,10 +26,10 @@ public class JoseMoralesProgram1 {
 		int leastRainfallQuarter = 0;
 	
 		
-		for(int i = 1; i < 5; i++){
+		for (int i = 1; i < 5; i++) {
 			
-		
-			System.out.println("Enter rainfall for quarter number " + i);
+			// Store input into quarterRainfall variable
+			System.out.println("Enter rainfall for quarter number " + i + ", in inches.");
 			quarterRainfall = input.nextDouble();
 			
 			// add each quarter together with each iteration
@@ -37,13 +37,15 @@ public class JoseMoralesProgram1 {
 			
 			
 			// check for max and min rain fall
-			if (quarterRainfall > maxRainfall) {
+			if (quarterRainfall > maxRainfall && quarterRainfall != 0) {
 				
 				maxRainfall = quarterRainfall;
 				
 				//store Quarter's ID number, with Highest Rainfall
 				maxRainfallQuarter = i;
+			
 				
+				// TODO FIX MIN RAINFALL LOGIC: BUGS OUT WHEN VALUES ARE INPUT INCREMENTAL AND SEQUENTIAL I.E 1,2,3,4...
 				
 			} else if (quarterRainfall < minRainfall) {
 				
@@ -60,11 +62,11 @@ public class JoseMoralesProgram1 {
 		
 		
 		// output driest quarter
-		System.out.println("The quarter with least rain is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
+		System.out.println("The quarter with the least rain is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
 		
 
 		// output wettest quarter
-		System.out.println("The quarter with most rain is Quarter " + maxRainfallQuarter + " with " + maxRainfall + " inches of rain.");
+		System.out.println("The quarter with the most rain is Quarter " + maxRainfallQuarter + " with " + maxRainfall + " inches of rain.");
 		
 		// Output sum total
 		System.out.println("It rained " + totalRainfall + " inches in total this year");
