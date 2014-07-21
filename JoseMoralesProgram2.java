@@ -41,6 +41,13 @@ public class JoseMoralesProgram2 {
 				System.out.println("Enter rainfall for Quarter #" + i + " year #" + y + ", in inches.");
 				quarterRainfall = input.nextDouble();
 				
+				
+				// if counter is past the first iteration, reset totalRainfall to 0
+				if (!(i > 1)) {
+					
+					totalRainfall = 0;
+				}
+				
 				// add each quarter together with each iteration
 				totalRainfall += quarterRainfall;
 				
@@ -70,9 +77,6 @@ public class JoseMoralesProgram2 {
 			} // end inner for loop
 			
 			
-			//TODO Must compare totalRainfalls to ascertain which year is the wettest/driest
-			
-			
 			// output driest quarter
 			System.out.println("The quarter with the least rain is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
 			
@@ -88,15 +92,30 @@ public class JoseMoralesProgram2 {
 			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches.");
 			
 			
+//			
+//			//TODO Must compare totalRainfalls to ascertain which year is the wettest/driest
+//			if (totalRainfall > maxRainfall) {
+//				
+//				maxRainfall = totalRainfall;
+//				
+//				maxRainfallYear = y;
+//			}
+//			
+//			if (totalRainfall < minRainfall) {
+//				
+//				minRainfall = totalRainfall;
+//				
+//				leastRainfallYear = y;
+//				
+//				
+//			}
+//			
+			
 		} // end outer for loop
 	
 		
-		
-
-		
-		
-		
-		
+//		System.out.println("It rained the most in year #" + maxRainfallYear);
+//		System.out.println("It rained the least in year #" + leastRainfallYear);
 
 	}
 
