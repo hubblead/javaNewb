@@ -26,9 +26,16 @@ public class JoseMoralesProgram3 {
 				
 				// if seconds = 1 don't append an "S"
 				// else if minutes = 1 do the same.
-				if (s == 1) {
+				if (s == 1) 
+				{
 					secPlural = "";
-				} else if (m == 1) {
+				}
+				else if (s == 0)
+				{
+				 secPlural = "s";	
+				}
+				else if (m == 1) 
+				{
 					minPlural = "";
 				}
 				
