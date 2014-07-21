@@ -43,11 +43,10 @@ public class JoseMoralesProgram1 {
 				
 				//store Quarter's ID number, with Highest Rainfall
 				maxRainfallQuarter = i;
+				
+			} 
 			
-				
-				// TODO FIX MIN RAINFALL LOGIC: BUGS OUT WHEN VALUES ARE INPUT INCREMENTAL AND SEQUENTIAL I.E 1,2,3,4...
-				
-			} else if (quarterRainfall < minRainfall) {
+			 if (quarterRainfall < minRainfall) {
 				
 				minRainfall = quarterRainfall;
 				
