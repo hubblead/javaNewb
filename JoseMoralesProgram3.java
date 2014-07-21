@@ -18,16 +18,21 @@ public class JoseMoralesProgram3 {
 		for (int m = numMinutes - 1; m >= 0; m--) {
 			
 			// TODO figure out plural output
-			
-			String plural = "";
+			// store letter s to append to minutes and seconds as plural by default
+			String secPlural = "s";
+			String minPlural = "s";
 			
 			for (int s = 59; s >= 0; s--) {
 				
-				
-				if (s != 1 || m != 1) {
-					plural = "s";
+				// if seconds = 1 don't append an "S"
+				// else if minutes = 1 do the same.
+				if (s == 1) {
+					secPlural = "";
+				} else if (m == 1) {
+					minPlural = "";
 				}
-				System.out.println(m + " minute" + plural + " " + s +  " Second" + plural);
+				
+				System.out.println(m + " minute" + minPlural + " " + s +  " Second" + secPlural);
 			} //end inner for loop
 		
 		} // end outer for loop
