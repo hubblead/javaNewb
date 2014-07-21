@@ -17,9 +17,10 @@ public class JoseMoralesProgram2 {
 		double totalRainfall = 0;
 		double averageRainfall;
 		double quarterRainfall;
-		double maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
-		double minRainfall = Integer.MAX_VALUE; // minimum rainfall possible assigned to highest possible value
+		double maxRainfall = Integer.MIN_VALUE; // maximum Quarter rainfall possible assigned to smallest possible value
+		double minRainfall = Integer.MAX_VALUE; // minimum Qurter rainfall possible assigned to highest possible value
 		
+		// Minimum and Maximum Annual Variables
 		double maxAnnualRain = Integer.MIN_VALUE;
 		double minAnnualRain = Integer.MAX_VALUE;
 		
@@ -85,26 +86,25 @@ public class JoseMoralesProgram2 {
 			
 			
 			// output driest quarter
-			System.out.println("The quarter with the least rain is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
+			System.out.println("The quarter with the least rain in year " + y + " is Quarter " + leastRainfallQuarter + " with " + minRainfall + " inches of rain.");
 			
 
 			// output wettest quarter
-			System.out.println("The quarter with the most rain is Quarter " + maxRainfallQuarter + " with " + maxRainfall + " inches of rain.");
+			System.out.println("The quarter with the most rain in year " + y + " is Quarter " + maxRainfallQuarter + " with " + maxRainfall + " inches of rain.");
 			
 			// Output sum total
-			System.out.println("It rained " + totalRainfall + " inches in total this year");
+			System.out.println("It rained " + totalRainfall + " inches in total in year " + y);
 			
 			// Output average
 			averageRainfall = totalRainfall / 4;
-			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches.");
+			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches." + '\n');
 			
 			
 			
-			//TODO Must compare totalRainfalls to ascertain which year is the wettest/driest
 			
 			
 		
-			System.out.println("If total rainfall of " + totalRainfall + " is greater than " + maxAnnualRain);
+			//System.out.println("If total rainfall of " + totalRainfall + " is greater than " + maxAnnualRain);
 			if (totalRainfall > maxAnnualRain) {
 				
 				
@@ -114,7 +114,7 @@ public class JoseMoralesProgram2 {
 			
 			}
 			
-			System.out.println("If total rainfall of " + totalRainfall + " is less than " + minAnnualRain);
+			//System.out.println("If total rainfall of " + totalRainfall + " is less than " + minAnnualRain);
 			if (totalRainfall < minAnnualRain) {
 				
 				minAnnualRain = totalRainfall;
