@@ -1,7 +1,8 @@
-
-/*Program 2 Assignment 10 By Jose Morales Mendizabal
+/*
+ * *Program 2 Assignment 10 By Jose Morales Mendizabal
  * Modifies Program 1 by adding Multidimensional iteration
  ========================================================== */
+
 import java.util.Scanner;
 
 
@@ -21,6 +22,7 @@ public class JoseMoralesProgram2 {
 		double minRainfall = Integer.MAX_VALUE; // minimum Qurter rainfall possible assigned to highest possible value
 		
 		// Minimum and Maximum Annual Variables
+		// TODO find away to reuse min and max variables above
 		double maxAnnualRain = Integer.MIN_VALUE;
 		double minAnnualRain = Integer.MAX_VALUE;
 		
@@ -47,9 +49,10 @@ public class JoseMoralesProgram2 {
 				// if counter equals 1 i.e. if we're on the first iteration, reset variables
 				// this makes each year start off with a blank slate
 				if (i == 1) 
+					
 				{
 					
-					maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
+					maxRainfall = Integer.MIN_VALUE; 
 					minRainfall = Integer.MAX_VALUE;
 					maxRainfallQuarter = 0;
 					leastRainfallQuarter = 0;
@@ -61,7 +64,8 @@ public class JoseMoralesProgram2 {
 				
 				
 				// check for max and min rain fall
-				if (quarterRainfall >= maxRainfall) 
+				if (quarterRainfall >= maxRainfall)
+					
 				{
 					
 					maxRainfall = quarterRainfall;
@@ -72,13 +76,14 @@ public class JoseMoralesProgram2 {
 				} 
 				
 				 if (quarterRainfall <= minRainfall) 
+					 
 				 {
 					
 					minRainfall = quarterRainfall;
 					
 					leastRainfallQuarter = i;
 
-				}
+				 }
 				
 				
 				
@@ -97,7 +102,7 @@ public class JoseMoralesProgram2 {
 			
 			// Output average
 			averageRainfall = totalRainfall / 4;
-			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches." + '\n');
+			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches in year " + y + '\n');
 			
 			
 			
@@ -105,18 +110,18 @@ public class JoseMoralesProgram2 {
 			
 		
 			//System.out.println("If total rainfall of " + totalRainfall + " is greater than " + maxAnnualRain);
-			if (totalRainfall > maxAnnualRain) {
+			if (totalRainfall > maxAnnualRain) 
 				
-				
+			{
 				maxAnnualRain = totalRainfall;
-		
 				wettestYear = y;
 			
 			}
 			
 			//System.out.println("If total rainfall of " + totalRainfall + " is less than " + minAnnualRain);
-			if (totalRainfall < minAnnualRain) {
+			if (totalRainfall < minAnnualRain) 
 				
+			{
 				minAnnualRain = totalRainfall;
 				driestYear = y;	
 			}
