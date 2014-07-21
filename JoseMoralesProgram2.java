@@ -2,8 +2,6 @@
 /*Program 2 Assignment 10 By Jose Morales Mendizabal
  * Modifies Program 1 by adding Multidimensional iteration
  ========================================================== */
-
-
 import java.util.Scanner;
 
 
@@ -42,10 +40,15 @@ public class JoseMoralesProgram2 {
 				quarterRainfall = input.nextDouble();
 				
 				
-				// if counter is past the first iteration, reset totalRainfall to 0
-				if (!(i > 1)) {
+				// if counter equals 1 i.e. if we're on the first iteration, reset variables
+				// this makes each year input start off with a blank slate
+				if (i == 1) {
 					
 					totalRainfall = 0;
+					maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
+					minRainfall = Integer.MAX_VALUE;
+					maxRainfallQuarter = 0;
+					leastRainfallQuarter = 0;
 				}
 				
 				// add each quarter together with each iteration
@@ -53,6 +56,7 @@ public class JoseMoralesProgram2 {
 				
 				
 				// check for max and min rain fall
+				// TODO Must reset maxrainfall and leastrainfall quarter with each iteration;
 				if (quarterRainfall >= maxRainfall) 
 				{
 					
