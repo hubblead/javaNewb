@@ -20,12 +20,15 @@ public class JoseMoralesProgram2 {
 		double maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
 		double minRainfall = Integer.MAX_VALUE; // minimum rainfall possible assigned to highest possible value
 		
+		double maxAnnualRain = Integer.MIN_VALUE;
+		double minAnnualRain = Integer.MAX_VALUE;
+		
 		
 		// Variables that store the number of the quarters and year(s) with most and least rain
 		int maxRainfallQuarter = 0;
 		int leastRainfallQuarter = 0;
-		int maxRainfallYear = 0;
-		int leastRainfallYear = 0;
+		int wettestYear = 0;
+		int driestYear = 0;
 		
 		
 		System.out.println("How many years of rainfall shoud be computed?");
@@ -41,14 +44,15 @@ public class JoseMoralesProgram2 {
 				
 				
 				// if counter equals 1 i.e. if we're on the first iteration, reset variables
-				// this makes each year input start off with a blank slate
-				if (i == 1) {
+				// this makes each year start off with a blank slate
+				if (i == 1) 
+				{
 					
-					totalRainfall = 0;
 					maxRainfall = Integer.MIN_VALUE; // maximum rainfall possible assigned to smallest possible value
 					minRainfall = Integer.MAX_VALUE;
 					maxRainfallQuarter = 0;
 					leastRainfallQuarter = 0;
+					totalRainfall = 0;
 				}
 				
 				// add each quarter together with each iteration
@@ -56,7 +60,6 @@ public class JoseMoralesProgram2 {
 				
 				
 				// check for max and min rain fall
-				// TODO Must reset maxrainfall and leastrainfall quarter with each iteration;
 				if (quarterRainfall >= maxRainfall) 
 				{
 					
@@ -96,30 +99,34 @@ public class JoseMoralesProgram2 {
 			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches.");
 			
 			
-//			
-//			//TODO Must compare totalRainfalls to ascertain which year is the wettest/driest
-//			if (totalRainfall > maxRainfall) {
-//				
-//				maxRainfall = totalRainfall;
-//				
-//				maxRainfallYear = y;
-//			}
-//			
-//			if (totalRainfall < minRainfall) {
-//				
-//				minRainfall = totalRainfall;
-//				
-//				leastRainfallYear = y;
-//				
-//				
-//			}
-//			
+			
+			//TODO Must compare totalRainfalls to ascertain which year is the wettest/driest
+			
+			
+		
+			System.out.println("If total rainfall of " + totalRainfall + " is greater than " + maxAnnualRain);
+			if (totalRainfall > maxAnnualRain) {
+				
+				
+				maxAnnualRain = totalRainfall;
+		
+				wettestYear = y;
+			
+			}
+			
+			System.out.println("If total rainfall of " + totalRainfall + " is less than " + minAnnualRain);
+			if (totalRainfall < minAnnualRain) {
+				
+				minAnnualRain = totalRainfall;
+				driestYear = y;	
+			}
+		
 			
 		} // end outer for loop
 	
 		
-//		System.out.println("It rained the most in year #" + maxRainfallYear);
-//		System.out.println("It rained the least in year #" + leastRainfallYear);
+		System.out.println( '\n' + "It rained the most in year #" + wettestYear + " with " + maxAnnualRain + " inches");
+		System.out.println("It rained the least in year #" + driestYear + " with " + minAnnualRain + " inches");
 
 	}
 
