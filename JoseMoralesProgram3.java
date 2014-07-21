@@ -15,18 +15,23 @@ public class JoseMoralesProgram3 {
 		System.out.println("Please Enter in Minutes to start the timer");
 		int numMinutes = input.nextInt();
 		
-		for (int m = numMinutes; m > 0; m--) {
+		for (int m = numMinutes - 1; m >= 0; m--) {
 			
-			for (int s = 59; s > 0; s--) {
+			// TODO figure out plural output
+			
+			String plural = "";
+			
+			for (int s = 59; s >= 0; s--) {
 				
-//				if (s != 1) {
-//					String plural = "s"; 
-//				}
-				System.out.println(m + "minutes" + s + " Seconds");
+				
+				if (s != 1 || m != 1) {
+					plural = "s";
+				}
+				System.out.println(m + " minute" + plural + " " + s +  " Second" + plural);
 			} //end inner for loop
 		
 		} // end outer for loop
-
+		System.out.println("The timer is done!");
 	}
 
 }
