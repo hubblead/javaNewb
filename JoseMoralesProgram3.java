@@ -1,6 +1,6 @@
 /*
  * Program 3 Assignment 10 by Jose Morales Mendizabal
- * Replicates Timer Functionality
+ * Simulates Timer Functionality
  ========================================================== */
 
 import java.util.Scanner;
@@ -12,34 +12,35 @@ public class JoseMoralesProgram3 {
 		// Instantiate Scanner Object
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Please Enter in Minutes to start the timer");
+		System.out.println("Please Enter in Minutes to Start the Timer:");
 		int numMinutes = input.nextInt();
 		
 		for (int m = numMinutes - 1; m >= 0; m--) {
 			
-			// TODO figure out plural output
-			// store letter s to append to minutes and seconds as plural by default
-			String secPlural = "s";
-			String minPlural = "s";
 			
-			for (int s = 59; s >= 0; s--) {
+			
+				String secPlural;
+				String minPlural;
+
+				for (int s = 59; s >= 0; s--) {
+					// store letter "s" to append to minutes and seconds as plural by default
+					secPlural = "s";
+					minPlural = "s";
+
+					// if seconds = 1 don't append an "S"
+					// if minutes = 1 don't append "S"
+					
+					if (s == 1) 
+					{
+						secPlural = "";
+					}
+					
+					 if (m == 1) 
+					{
+						minPlural = "";
+					}
 				
-				// if seconds = 1 don't append an "S"
-				// else if minutes = 1 do the same.
-				if (s == 1) 
-				{
-					secPlural = "";
-				}
-				else if (s == 0)
-				{
-				 secPlural = "s";	
-				}
-				else if (m == 1) 
-				{
-					minPlural = "";
-				}
-				
-				System.out.println(m + " minute" + minPlural + " " + s +  " Second" + secPlural);
+					System.out.println(m + " minute" + minPlural + " " + s +  " Second" + secPlural);
 			} //end inner for loop
 		
 		} // end outer for loop

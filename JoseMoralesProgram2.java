@@ -105,11 +105,7 @@ public class JoseMoralesProgram2 {
 			System.out.println("There was an average annual rainfall of " + averageRainfall + " inches in year " + y + '\n');
 			
 			
-			
-			
-			
-		
-			//System.out.println("If total rainfall of " + totalRainfall + " is greater than " + maxAnnualRain);
+			// Assess which year had the most Total Annual rainfall
 			if (totalRainfall > maxAnnualRain) 
 				
 			{
@@ -118,7 +114,7 @@ public class JoseMoralesProgram2 {
 			
 			}
 			
-			//System.out.println("If total rainfall of " + totalRainfall + " is less than " + minAnnualRain);
+
 			if (totalRainfall < minAnnualRain) 
 				
 			{
