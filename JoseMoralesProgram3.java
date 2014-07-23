@@ -17,8 +17,6 @@ public class JoseMoralesProgram3 {
 		
 		for (int m = numMinutes - 1; m >= 0; m--) {
 			
-			
-			
 				String secPlural;
 				String minPlural;
 
